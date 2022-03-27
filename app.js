@@ -1,20 +1,48 @@
-const http = require('htpp');
+const express = require('express');
 
-const server = http.createServer((req,res) => {
-    if (req.url === '\') {
-        res.write('Heloo world ')
-        res.end();
-    }
+const app = express();
+const mongoose = require('mongoose');
 
-    if (req.url === '/api/courses') {
-        res.write(JSON.stringify[1,2,3]);
-        res.end();
-    }
+//Middlewares  für authentification
+
+// Imnprt Routes
+
+const postsRoutes = require('./routes/posts');
+
+app.use('/posts', postsRoutes);
+
+
+
+app.get('/',(req,res) => {
+   res.send('We are on home ');
 
 });
 
 
-server.listen(3000);
+// how do we start listender to the server 
+app.listen(3000, () => console.log('Server started'))
 
-console.log('Listning on port 3000...');
+//  connect to database 
+mongoose.connect('mongodb://mrfabixx:Toietmoi2016!@cluster0.dzktk.mongodb.net/Cluster0?retryWrites=true&w=majority', () => 
+ console.log('connected to Database')
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

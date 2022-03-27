@@ -1,0 +1,27 @@
+{
+  "name": "api-node.js-",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrfabixx/API-node.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrfabixx/API-node.js/issues"
+  },
+  "homepage": "https://github.com/mrfabixx/API-node.js#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
